@@ -51,7 +51,7 @@
 - [ ] Day 25 — Live price fetching + real-time prediction
 - [ ] Day 26 — Plotly dashboard
 - [ ] Day 27 — Unit tests
-- [ ] Day 28 — 🎉 Project complete!
+- [x] Day 28 — 🎉 Project complete!
 
 ---
 
