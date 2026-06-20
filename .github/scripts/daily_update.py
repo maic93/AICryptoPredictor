@@ -6,7 +6,7 @@ import os
 import re
 from datetime import date
 
-PROJECT_START = date(2025, 6, 20)
+PROJECT_START = date(2026, 6, 20)
 
 CURRICULUM = {
     1:  "Day 01 — Project setup & structure",

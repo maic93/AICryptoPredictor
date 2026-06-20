@@ -13,12 +13,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v4.2.2
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Set up Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v5.6.0
         with:
           python-version: '3.11'
 
@@ -30,8 +30,8 @@ jobs:
 
       - name: Configure Git
         run: |
-          git config --global user.name "AICryptoPredictor Bot"
-          git config --global user.email "actions@github.com"
+          git config --global user.name "maic93"
+          git config --global user.email "worldboy.mostafa@gmail.com"
 
       - name: Commit and push
         run: |
