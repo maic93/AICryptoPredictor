@@ -1,0 +1,15 @@
+__pycache__/
+*.py[cod]
+.env
+.venv/
+venv/
+*.h5
+*.pkl
+*.pt
+data/raw/
+data/processed/
+data/*.png
+data/*.html
+.ipynb_checkpoints/
+*.log
+.DS_Store
