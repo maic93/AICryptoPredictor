@@ -21,7 +21,7 @@ def run():
     print("=" * 50)
     for coin in COINS:
         df = fetch(coin)
-        latest = float(df["Close"].iloc[-1])
+        latest = float(df["Close"].iloc[-1].item())
         print(f"  ✅ {coin:10s} | {len(df):4d} rows | Latest close: ${latest:,.2f}")
     print("\n💾 Data saved to data/raw/")
 
