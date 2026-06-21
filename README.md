@@ -19,7 +19,7 @@
 
 ### Week 1 — Foundations
 - [ ] Day 01 — Project setup & structure
-- [ ] Day 02 — Fetch BTC/ETH historical data via yfinance
+- [x] Day 02 — Fetch BTC/ETH historical data via yfinance
 - [ ] Day 03 — Exploratory Data Analysis (EDA)
 - [ ] Day 04 — Technical indicators: RSI, MACD, Bollinger Bands
 - [ ] Day 05 — Data cleaning & missing value handling
