@@ -18,7 +18,7 @@
 ## 📊 Daily Progress
 
 ### Week 1 — Foundations
-- [ ] Day 01 — Project setup & structure
+- [x] Day 01 — Project setup & structure
 - [x] Day 02 — Fetch BTC/ETH historical data via yfinance
 - [x] Day 03 — Exploratory Data Analysis (EDA)
 - [ ] Day 04 — Technical indicators: RSI, MACD, Bollinger Bands
