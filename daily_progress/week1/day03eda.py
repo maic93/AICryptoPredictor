@@ -4,8 +4,13 @@ Week 1: Foundations
 """
 import pandas as pd
 import numpy as np
+import matplotlib
+matplotlib.use("Agg")  # non-interactive backend for GitHub Actions
 import matplotlib.pyplot as plt
 import yfinance as yf
+import os
+
+os.makedirs("reports", exist_ok=True)
 
 def load(ticker="BTC-USD"):
     return yf.download(ticker, period="2y", progress=False, auto_adjust=True)
@@ -24,19 +29,23 @@ def eda(df: pd.DataFrame, ticker="BTC-USD"):
 def plot(df: pd.DataFrame, ticker="BTC-USD"):
     fig, axes = plt.subplots(2, 1, figsize=(12, 7))
     close = df["Close"].squeeze()
-    vol = df["Volume"].squeeze()
+    vol   = df["Volume"].squeeze()
+
     axes[0].plot(df.index, close, color="#F7931A", linewidth=1.5)
     axes[0].set_title(f"{ticker} Closing Price (2Y)", fontsize=13, fontweight="bold")
     axes[0].set_ylabel("Price (USD)")
     axes[0].grid(alpha=0.3)
+
     axes[1].bar(df.index, vol, color="#627EEA", alpha=0.6, width=1)
     axes[1].set_title("Volume", fontsize=12)
     axes[1].set_ylabel("Volume")
     axes[1].grid(alpha=0.3)
+
     plt.tight_layout()
-    plt.savefig("data/btc_eda.png", dpi=150)
-    print("  📈 Chart saved → data/btc_eda.png")
+    out = "reports/day03chart.png"
+    plt.savefig(out, dpi=150)
     plt.close()
+    print(f"  📈 Chart saved → {out}")
 
 def run():
     print("🔍 Day 03 — Exploratory Data Analysis")
