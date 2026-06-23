@@ -27,7 +27,7 @@ def build_and_train(ticker: str):
     model = XGBRegressor(n_estimators=200, learning_rate=0.05, random_state=42, verbosity=0)
     model.fit(X, y)
     latest_features = X[-1:]
-    latest_price = float(close.iloc[-1])
+    latest_price = float(close.iloc[-1].item())
     predicted_price = float(model.predict(latest_features)[0])
     return latest_price, predicted_price
 

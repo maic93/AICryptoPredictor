@@ -44,7 +44,7 @@ def run():
     print(f"  Total features  : {len(feature_cols)}")
     print(f"  Dataset shape   : {df.shape}")
     print(f"  Feature list    : {feature_cols[:8]} ...")
-    print(f"  Sample target   : ${float(df['target'].iloc[-1]):,.2f}")
+    print(f"  Sample target   : ${float(df['target'].iloc[-1].item()):,.2f}")
     print("\n✅ Feature engineering complete!")
 
 if __name__ == "__main__":
