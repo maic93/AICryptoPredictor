@@ -22,7 +22,7 @@
 - [x] Day 02 — Fetch BTC/ETH historical data via yfinance
 - [x] Day 03 — Exploratory Data Analysis (EDA)
 - [x] Day 04 — Technical indicators: RSI, MACD, Bollinger Bands
-- [ ] Day 05 — Data cleaning & missing value handling
+- [x] Day 05 — Data cleaning & missing value handling
 - [ ] Day 06 — Feature engineering: lag features, rolling stats
 - [ ] Day 07 — Week 1 recap & data pipeline complete
 
