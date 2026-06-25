@@ -23,7 +23,7 @@
 - [x] Day 03 — Exploratory Data Analysis (EDA)
 - [x] Day 04 — Technical indicators: RSI, MACD, Bollinger Bands
 - [x] Day 05 — Data cleaning & missing value handling
-- [ ] Day 06 — Feature engineering: lag features, rolling stats
+- [x] Day 06 — Feature engineering: lag features, rolling stats
 - [ ] Day 07 — Week 1 recap & data pipeline complete
 
 ### Week 2 — Classical ML
