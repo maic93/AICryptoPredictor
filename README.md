@@ -24,7 +24,7 @@
 - [x] Day 04 — Technical indicators: RSI, MACD, Bollinger Bands
 - [x] Day 05 — Data cleaning & missing value handling
 - [x] Day 06 — Feature engineering: lag features, rolling stats
-- [ ] Day 07 — Week 1 recap & data pipeline complete
+- [x] Day 07 — Week 1 recap & data pipeline complete
 
 ### Week 2 — Classical ML
 - [ ] Day 08 — Linear Regression baseline model
