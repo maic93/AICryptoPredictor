@@ -27,7 +27,7 @@
 - [x] Day 07 — Week 1 recap & data pipeline complete
 
 ### Week 2 — Classical ML
-- [ ] Day 08 — Linear Regression baseline model
+- [x] Day 08 — Linear Regression baseline model
 - [ ] Day 09 — Decision Tree Regressor
 - [ ] Day 10 — Random Forest + feature importance
 - [ ] Day 11 — XGBoost + hyperparameter tuning
