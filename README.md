@@ -28,7 +28,7 @@
 
 ### Week 2 — Classical ML
 - [x] Day 08 — Linear Regression baseline model
-- [ ] Day 09 — Decision Tree Regressor
+- [x] Day 09 — Decision Tree Regressor
 - [ ] Day 10 — Random Forest + feature importance
 - [ ] Day 11 — XGBoost + hyperparameter tuning
 - [ ] Day 12 — LightGBM + cross-validation
