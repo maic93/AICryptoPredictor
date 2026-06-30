@@ -31,10 +31,15 @@ jobs:
       - name: Configure Git
         run: |
           git config --global user.name "maic93"
-          git config --global user.email "worldboy.mostafa@gmail.com"
+          git config --global user.email "maic93@users.noreply.github.com"
 
-      - name: Commit and push
+      - name: Commit and push (with retry)
         run: |
           git add .
-          git diff --staged --quiet || git commit -m "$(python .github/scripts/get_commit_message.py)"
-          git push
+          git diff --staged --quiet && echo "Nothing to commit" && exit 0
+          git commit -m "$(python .github/scripts/get_commit_message.py)"
+          for i in 1 2 3 4 5; do
+            git pull --rebase origin main && git push && break
+            echo "Push failed, retrying ($i/5)..."
+            sleep 5
+          done
