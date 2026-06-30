@@ -30,7 +30,7 @@
 - [x] Day 08 — Linear Regression baseline model
 - [x] Day 09 — Decision Tree Regressor
 - [x] Day 10 — Random Forest + feature importance
-- [ ] Day 11 — XGBoost + hyperparameter tuning
+- [x] Day 11 — XGBoost + hyperparameter tuning
 - [ ] Day 12 — LightGBM + cross-validation
 - [ ] Day 13 — Model comparison leaderboard (MAE, RMSE, R²)
 - [ ] Day 14 — Week 2 recap & best model saved
