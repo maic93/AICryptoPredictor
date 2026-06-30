@@ -17,6 +17,8 @@ os.makedirs("data/processed", exist_ok=True)
 
 def full_pipeline(ticker: str) -> pd.DataFrame:
     df = yf.download(ticker, period="2y", progress=False, auto_adjust=True).dropna()
+    if isinstance(df.columns, pd.MultiIndex):
+        df.columns = [col[0] for col in df.columns]
     close = df["Close"].squeeze()
     delta = close.diff()
     gain = delta.clip(lower=0).rolling(14).mean()

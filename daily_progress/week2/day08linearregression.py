@@ -18,6 +18,8 @@ os.makedirs("reports", exist_ok=True)
 
 def build_dataset(ticker="BTC-USD"):
     df = yf.download(ticker, period="2y", progress=False, auto_adjust=True).dropna()
+    if isinstance(df.columns, pd.MultiIndex):
+        df.columns = [col[0] for col in df.columns]
     close = df["Close"].squeeze()
     for lag in [1, 2, 3, 5, 7, 14]:
         df[f"lag{lag}"] = close.shift(lag)

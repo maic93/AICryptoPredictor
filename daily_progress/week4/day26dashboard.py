@@ -10,6 +10,8 @@ from sklearn.model_selection import train_test_split
 
 def get_predictions(ticker="BTC-USD"):
     df = yf.download(ticker, period="1y", progress=False, auto_adjust=True).dropna()
+    if isinstance(df.columns, pd.MultiIndex):
+        df.columns = [col[0] for col in df.columns]
     close = df["Close"].squeeze()
     for lag in [1, 2, 3, 5, 7]:
         df[f"lag{lag}"] = close.shift(lag)

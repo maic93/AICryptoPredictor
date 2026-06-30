@@ -14,6 +14,8 @@ os.makedirs("reports", exist_ok=True)
 
 def load(ticker="BTC-USD"):
     df = yf.download(ticker, period="2y", progress=False, auto_adjust=True)
+    if isinstance(df.columns, pd.MultiIndex):
+        df.columns = [col[0] for col in df.columns]
     return df.dropna()
 
 def engineer_features(df: pd.DataFrame) -> pd.DataFrame:

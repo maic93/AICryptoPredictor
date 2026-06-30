@@ -17,6 +17,9 @@ os.makedirs("reports", exist_ok=True)
 
 def build_dataset(ticker="BTC-USD"):
     df = yf.download(ticker, period="2y", progress=False, auto_adjust=True).dropna()
+    # Flatten multi-level columns if present
+    if isinstance(df.columns, pd.MultiIndex):
+        df.columns = [col[0] for col in df.columns]
     close = df["Close"].squeeze()
     for lag in [1, 2, 3, 5, 7, 14]:
         df[f"lag{lag}"] = close.shift(lag)
@@ -24,10 +27,13 @@ def build_dataset(ticker="BTC-USD"):
         df[f"rollMean{w}"] = close.rolling(w).mean()
         df[f"rollStd{w}"]  = close.rolling(w).std()
     df["return1d"] = close.pct_change()
-    df["return7d"] = close.pct_change(7)
+    df["return7d"]  = close.pct_change(7)
     df["target"] = close.shift(-1)
     df.dropna(inplace=True)
     feat_cols = [c for c in df.columns if c not in ["target","Open","High","Low","Close","Volume"]]
+    # Ensure all column names are plain strings
+    feat_cols = [str(c) for c in feat_cols]
+    df.columns = [str(c) for c in df.columns]
     return df[feat_cols].values, df["target"].values, feat_cols, df.index
 
 def plot(y_test, preds, dates, feat_cols, importances):
@@ -65,7 +71,7 @@ def run():
     print("\n  Top 5 Features:")
     importances = model.feature_importances_
     for name, score in sorted(zip(feat_cols, importances), key=lambda x: -x[1])[:5]:
-        print(f"    {name:>15s}: {'█' * int(score*100)} ({score:.4f})")
+        print(f"    {str(name):>15s}: {'█' * int(score*100)} ({score:.4f})")
     plot(y_test, preds, dates_test, feat_cols, importances)
     print("\n✅ Random Forest complete!")
 
