@@ -31,7 +31,7 @@
 - [x] Day 09 — Decision Tree Regressor
 - [x] Day 10 — Random Forest + feature importance
 - [x] Day 11 — XGBoost + hyperparameter tuning
-- [ ] Day 12 — LightGBM + cross-validation
+- [x] Day 12 — LightGBM + cross-validation
 - [ ] Day 13 — Model comparison leaderboard (MAE, RMSE, R²)
 - [ ] Day 14 — Week 2 recap & best model saved
 
