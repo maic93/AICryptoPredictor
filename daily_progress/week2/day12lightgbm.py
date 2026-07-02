@@ -26,11 +26,14 @@ def build_dataset(ticker="BTC-USD"):
         df[f"rollMean{w}"] = close.rolling(w).mean()
         df[f"rollStd{w}"]  = close.rolling(w).std()
     df["return1d"] = close.pct_change()
-    df["return7d"] = close.pct_change(7)
+    df["return7d"]  = close.pct_change(7)
     df["target"] = close.shift(-1)
     df.dropna(inplace=True)
     feat_cols = [c for c in df.columns if c not in ["target","Open","High","Low","Close","Volume"]]
-    return df[feat_cols].values, df["target"].values
+    feat_cols = [str(c) for c in feat_cols]
+    df.columns = [str(c) for c in df.columns]
+    # Return DataFrame (not numpy array) so LightGBM has feature names
+    return df[feat_cols], df["target"]
 
 def plot(maes, rmses, r2s):
     fig, axes = plt.subplots(1, 3, figsize=(14, 5))
@@ -50,7 +53,9 @@ def plot(maes, rmses, r2s):
             ax.text(bar.get_x() + bar.get_width()/2, bar.get_height() * 1.01,
                     f"{v:,.0f}" if label != "R²" else f"{v:.3f}",
                     ha="center", fontsize=8)
-    plt.suptitle("LightGBM — 5-Fold Time Series Cross-Validation", fontsize=13, fontweight="bold")
+    plt.suptitle("LightGBM — 5-Fold Time Series Cross-Validation\n"
+                 "(Fold 1 lower R² is normal — less training data in early folds)",
+                 fontsize=12, fontweight="bold")
     plt.tight_layout()
     out = "reports/day12chart.png"
     plt.savefig(out, dpi=150); plt.close()
@@ -62,18 +67,23 @@ def run():
     X, y = build_dataset()
     tscv = TimeSeriesSplit(n_splits=5)
     maes, rmses, r2s = [], [], []
+
     for fold, (tr, te) in enumerate(tscv.split(X), 1):
         model = lgb.LGBMRegressor(n_estimators=300, learning_rate=0.05,
                                    num_leaves=31, random_state=42, verbose=-1)
-        model.fit(X[tr], y[tr])
-        preds = model.predict(X[te])
-        maes.append(mean_absolute_error(y[te], preds))
-        rmses.append(np.sqrt(mean_squared_error(y[te], preds)))
-        r2s.append(r2_score(y[te], preds))
+        # Pass DataFrame slices so feature names are preserved → no warning
+        model.fit(X.iloc[tr], y.iloc[tr])
+        preds = model.predict(X.iloc[te])
+        maes.append(mean_absolute_error(y.iloc[te], preds))
+        rmses.append(np.sqrt(mean_squared_error(y.iloc[te], preds)))
+        r2s.append(r2_score(y.iloc[te], preds))
         print(f"  Fold {fold}: MAE=${maes[-1]:>9,.2f} | RMSE=${rmses[-1]:>9,.2f} | R²={r2s[-1]:.4f}")
+
     print(f"\n  Mean MAE  : ${np.mean(maes):,.2f} ± ${np.std(maes):,.2f}")
     print(f"  Mean RMSE : ${np.mean(rmses):,.2f} ± ${np.std(rmses):,.2f}")
     print(f"  Mean R²   : {np.mean(r2s):.4f}")
+    print(f"\n  ℹ️  Note: Fold 1 lower R² is expected — time series CV trains")
+    print(f"  on less data in early folds. Performance improves as data grows.")
     plot(maes, rmses, r2s)
     print("\n✅ LightGBM complete!")
 
