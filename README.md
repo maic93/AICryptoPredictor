@@ -32,7 +32,7 @@
 - [x] Day 10 — Random Forest + feature importance
 - [x] Day 11 — XGBoost + hyperparameter tuning
 - [x] Day 12 — LightGBM + cross-validation
-- [ ] Day 13 — Model comparison leaderboard (MAE, RMSE, R²)
+- [x] Day 13 — Model comparison leaderboard (MAE, RMSE, R²)
 - [ ] Day 14 — Week 2 recap & best model saved
 
 ### Week 3 — Deep Learning
