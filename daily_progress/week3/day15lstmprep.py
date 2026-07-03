@@ -29,7 +29,7 @@ def plot(prices, close_series):
     axes[0].plot(close_series.index, close_series.values, color="#F7931A", linewidth=1.5)
     axes[0].axvline(close_series.index[int(len(close_series)*0.8)],
                      color="red", linestyle="--", linewidth=1.5, label="Train/Test Split (80/20)")
-    axes[0].set_title("BTC Price — Train/Test Split for LSTM", fontweight="bold")
+    axes[0].set_title("BTC Price — Train vs Test Split for LSTM", fontweight="bold")
     axes[0].legend(); axes[0].grid(alpha=0.3)
     lookback = 60
     scaler = MinMaxScaler()
@@ -39,7 +39,7 @@ def plot(prices, close_series):
     axes[1].plot(range(lookback), X[sample_idx], color="#3498DB", linewidth=1.5, label="Input sequence (60 days)")
     axes[1].axvline(lookback-1, color="red", linestyle="--")
     axes[1].scatter([lookback], [y[sample_idx]], color="#E74C3C", s=100, zorder=5, label=f"Target (day 61)")
-    axes[1].set_title("Example LSTM Input Sequence → Target", fontweight="bold")
+    axes[1].set_title("Example LSTM Input Sequence to Target", fontweight="bold")
     axes[1].set_xlabel("Timestep"); axes[1].set_ylabel("Scaled Price")
     axes[1].legend(); axes[1].grid(alpha=0.3)
     plt.tight_layout()

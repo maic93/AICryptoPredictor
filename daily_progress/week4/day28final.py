@@ -63,7 +63,7 @@ def plot_summary():
     ax.set_yticklabels(["Week 1","Week 2","Week 3","Week 4"], color="white")
     for i in range(4):
         for j in range(7):
-            ax.text(j, i, "✅", ha="center", va="center", fontsize=12)
+            ax.text(j, i, "OK", ha="center", va="center", fontsize=12)
     ax.set_title("28-Day Completion Grid", color="white", fontweight="bold")
     ax.set_facecolor("#161b22")
 
@@ -83,7 +83,7 @@ def plot_summary():
             fontsize=12, fontweight="bold", linespacing=1.8,
             transform=ax.transAxes)
 
-    plt.suptitle("🤖 AICryptoPredictor — Final Summary", fontsize=15,
+    plt.suptitle("AICryptoPredictor - Final Summary", fontsize=15,
                   fontweight="bold", color="white")
     plt.tight_layout()
     out = "reports/day28chart.png"
