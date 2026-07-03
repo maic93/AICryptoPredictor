@@ -33,7 +33,7 @@
 - [x] Day 11 — XGBoost + hyperparameter tuning
 - [x] Day 12 — LightGBM + cross-validation
 - [x] Day 13 — Model comparison leaderboard (MAE, RMSE, R²)
-- [ ] Day 14 — Week 2 recap & best model saved
+- [x] Day 14 — Week 2 recap & best model saved
 
 ### Week 3 — Deep Learning
 - [ ] Day 15 — LSTM sequence data preparation
