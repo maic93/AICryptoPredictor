@@ -36,7 +36,7 @@
 - [x] Day 14 — Week 2 recap & best model saved
 
 ### Week 3 — Deep Learning
-- [ ] Day 15 — LSTM sequence data preparation
+- [x] Day 15 — LSTM sequence data preparation
 - [ ] Day 16 — LSTM model training on BTC
 - [ ] Day 17 — GRU model
 - [ ] Day 18 — Bidirectional LSTM
