@@ -1,0 +1,48 @@
+name: 🔁 Re-run Specific Day
+
+on:
+  workflow_dispatch:
+    inputs:
+      day:
+        description: 'Day number to re-run (1-28)'
+        required: true
+        default: '16'
+
+permissions:
+  contents: write
+
+jobs:
+  rerun:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install pandas numpy yfinance requests scikit-learn xgboost lightgbm ta matplotlib seaborn plotly
+
+      - name: Re-run day script
+        run: python .github/scripts/rerun_day.py ${{ github.event.inputs.day }}
+
+      - name: Configure Git
+        run: |
+          git config --global user.name "maic93"
+          git config --global user.email "maic93@users.noreply.github.com"
+
+      - name: Commit and push
+        run: |
+          git add .
+          git diff --staged --quiet && echo "Nothing to commit" && exit 0
+          git commit -m "🔁 Re-run Day ${{ github.event.inputs.day }} (bug fix)"
+          for i in 1 2 3 4 5; do
+            git pull --rebase origin main && git push && break
+            echo "Retrying push ($i/5)..."
+            sleep 5
+          done
