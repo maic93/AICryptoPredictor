@@ -37,7 +37,7 @@
 
 ### Week 3 — Deep Learning
 - [x] Day 15 — LSTM sequence data preparation
-- [ ] Day 16 — LSTM model training on BTC
+- [x] Day 16 — LSTM model training on BTC
 - [ ] Day 17 — GRU model
 - [ ] Day 18 — Bidirectional LSTM
 - [ ] Day 19 — Attention mechanism
