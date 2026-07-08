@@ -40,7 +40,7 @@
 - [x] Day 16 — LSTM model training on BTC
 - [x] Day 17 — GRU model
 - [x] Day 18 — Bidirectional LSTM
-- [ ] Day 19 — Attention mechanism
+- [x] Day 19 — Attention mechanism
 - [ ] Day 20 — Transformer-based time series model
 - [ ] Day 21 — Week 3 recap & best DL model saved
 
