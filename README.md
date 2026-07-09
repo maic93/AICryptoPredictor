@@ -41,7 +41,7 @@
 - [x] Day 17 — GRU model
 - [x] Day 18 — Bidirectional LSTM
 - [x] Day 19 — Attention mechanism
-- [ ] Day 20 — Transformer-based time series model
+- [x] Day 20 — Transformer-based time series model
 - [ ] Day 21 — Week 3 recap & best DL model saved
 
 ### Week 4 — Production
