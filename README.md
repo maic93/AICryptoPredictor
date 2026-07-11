@@ -45,7 +45,7 @@
 - [x] Day 21 — Week 3 recap & best DL model saved
 
 ### Week 4 — Production
-- [ ] Day 22 — Backtesting framework
+- [x] Day 22 — Backtesting framework
 - [ ] Day 23 — Sharpe ratio, drawdown & strategy metrics
 - [ ] Day 24 — Ensemble model (ML + DL combined)
 - [ ] Day 25 — Live price fetching + real-time prediction
