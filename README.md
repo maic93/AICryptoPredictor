@@ -46,7 +46,7 @@
 
 ### Week 4 — Production
 - [x] Day 22 — Backtesting framework
-- [ ] Day 23 — Sharpe ratio, drawdown & strategy metrics
+- [x] Day 23 — Sharpe ratio, drawdown & strategy metrics
 - [ ] Day 24 — Ensemble model (ML + DL combined)
 - [ ] Day 25 — Live price fetching + real-time prediction
 - [ ] Day 26 — Plotly dashboard
