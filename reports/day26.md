@@ -2,20 +2,18 @@
 
 **Task:** Day 26 — Plotly dashboard
 **Script:** `daily_progress/week4/day26dashboard.py`
-**Date:** 2026-07-15 09:06 UTC
+**Date:** 2026-07-15 21:17 UTC *(re-run with bug fix)*
 
 ## Output
 
 ```
-📊 Day 26 — Plotly Dashboard
+Day 26 - Plotly Dashboard
 ==================================================
+  Test samples : 71
+  Date range   : 2026-05-05 → 2026-07-14
+  MAE          : $4,204.36
+  ✅ Plotly dashboard saved → reports/day26dashboard.html
+  📈 Chart saved → reports/day26chart.png
 
-STDERR:
-Traceback (most recent call last):
-  File "/home/runner/work/AICryptoPredictor/AICryptoPredictor/daily_progress/week4/day26dashboard.py", line 65, in <module>
-    run()
-  File "/home/runner/work/AICryptoPredictor/AICryptoPredictor/daily_progress/week4/day26dashboard.py", line 48, in run
-    error = predicted - actual
-            ~~~~~~~~~~^~~~~~~~
-ValueError: operands could not be broadcast together with shapes (71,) (85,)
+✅ Day 26 complete!
 ```
