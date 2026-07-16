@@ -50,7 +50,7 @@
 - [x] Day 24 — Ensemble model (ML + DL combined)
 - [x] Day 25 — Live price fetching + real-time prediction
 - [x] Day 26 — Plotly dashboard
-- [ ] Day 27 — Unit tests
+- [x] Day 27 — Unit tests
 - [x] Day 28 — 🎉 Project complete!
 
 ---
