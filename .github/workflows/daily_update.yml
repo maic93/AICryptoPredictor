@@ -23,7 +23,7 @@ jobs:
           python-version: '3.11'
 
       - name: Install dependencies
-        run: pip install pandas numpy yfinance requests scikit-learn xgboost lightgbm ta matplotlib seaborn plotly
+        run: pip install pandas numpy yfinance requests scikit-learn xgboost lightgbm ta matplotlib seaborn plotly scipy
 
       - name: Run daily progress script
         run: python .github/scripts/daily_update.py

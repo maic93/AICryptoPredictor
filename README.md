@@ -1,10 +1,12 @@
-# 🤖📈 AICryptoPredictor
+# AICryptoPredictor
 
-> A 28-day progressive project building an AI-powered cryptocurrency price prediction system using Python and Machine Learning — auto-committed daily via GitHub Actions.
+![CI](https://github.com/maic93/AICryptoPredictor/actions/workflows/ci.yml/badge.svg) ![Daily](https://github.com/maic93/AICryptoPredictor/actions/workflows/daily_update.yml/badge.svg)
+
+> A 56-day (8-week) progressive project building a complete AI-powered cryptocurrency system — auto-committed daily via GitHub Actions.
 
 ---
 
-## 🗓️ Roadmap
+## Roadmap
 
 | Week | Theme | Focus |
 |------|-------|-------|
@@ -12,10 +14,14 @@
 | Week 2 | **Classical ML** | Linear Regression, Random Forest, XGBoost, LightGBM |
 | Week 3 | **Deep Learning** | LSTM, GRU, Bidirectional, Attention, Transformer |
 | Week 4 | **Production** | Backtesting, ensemble, live pipeline, dashboard |
+| Week 5 | **Live Trading Signals** | Signal engine, backtesting, multi-timeframe, alerts |
+| Week 6 | **Sentiment Analysis** | News fetch, NLP, VADER, sentiment-enhanced model |
+| Week 7 | **Portfolio Optimizer** | Markowitz, Monte Carlo, Sharpe, risk-parity |
+| Week 8 | **Web Dashboard** | Streamlit app, price widget, prediction, signals |
 
 ---
 
-## 📊 Daily Progress
+## Daily Progress
 
 ### Week 1 — Foundations
 - [x] Day 01 — Project setup & structure
@@ -32,7 +38,7 @@
 - [x] Day 10 — Random Forest + feature importance
 - [x] Day 11 — XGBoost + hyperparameter tuning
 - [x] Day 12 — LightGBM + cross-validation
-- [x] Day 13 — Model comparison leaderboard (MAE, RMSE, R²)
+- [x] Day 13 — Model comparison leaderboard (MAE, RMSE, R2)
 - [x] Day 14 — Week 2 recap & best model saved
 
 ### Week 3 — Deep Learning
@@ -51,53 +57,82 @@
 - [x] Day 25 — Live price fetching + real-time prediction
 - [x] Day 26 — Plotly dashboard
 - [x] Day 27 — Unit tests
-- [x] Day 28 — 🎉 Project complete!
+- [x] Day 28 — Week 4 complete & project summary
+
+### Week 5 — Live Trading Signals
+- [ ] Day 29 — Live signal engine: fetch + score all coins
+- [ ] Day 30 — RSI + MACD combined signal strategy
+- [ ] Day 31 — Signal backtesting: win rate & profit factor
+- [ ] Day 32 — Confidence scoring for each signal
+- [ ] Day 33 — Multi-timeframe signal analysis (1d, 4h, 1h)
+- [ ] Day 34 — Signal alert system: log & report
+- [ ] Day 35 — Week 5 recap & signal dashboard
+
+### Week 6 — Sentiment Analysis
+- [ ] Day 36 — Fetch crypto news via NewsAPI / RSS
+- [ ] Day 37 — NLP preprocessing: tokenize, clean, stem
+- [ ] Day 38 — VADER sentiment scoring on crypto news
+- [ ] Day 39 — Sentiment trend over time visualization
+- [ ] Day 40 — Correlate sentiment score with price movement
+- [ ] Day 41 — Sentiment-enhanced price prediction model
+- [ ] Day 42 — Week 6 recap & sentiment pipeline complete
+
+### Week 7 — Portfolio Optimizer
+- [ ] Day 43 — Multi-coin return & covariance matrix
+- [ ] Day 44 — Markowitz efficient frontier
+- [ ] Day 45 — Monte Carlo portfolio simulation
+- [ ] Day 46 — Sharpe-optimal portfolio weights
+- [ ] Day 47 — Risk-parity portfolio allocation
+- [ ] Day 48 — Portfolio rebalancing strategy
+- [ ] Day 49 — Week 7 recap & portfolio summary
+
+### Week 8 — Web Dashboard
+- [ ] Day 50 — Streamlit app structure & layout
+- [ ] Day 51 — Live price widget + sparklines
+- [ ] Day 52 — Prediction chart component
+- [ ] Day 53 — Signal dashboard component
+- [ ] Day 54 — Sentiment gauge component
+- [ ] Day 55 — Portfolio pie chart component
+- [ ] Day 56 — Final dashboard & full project complete!
 
 ---
 
-## 📁 Structure
+## Structure
 
 ```
 AICryptoPredictor/
 ├── .github/
-│   ├── workflows/        # GitHub Actions daily automation
-│   └── scripts/          # Daily update & commit message scripts
-├── daily_progress/       # Auto-generated daily Python files
-│   ├── week1/
-│   ├── week2/
-│   ├── week3/
-│   └── week4/
-├── models/               # Saved trained models
-├── data/                 # Raw and processed datasets
-├── utils/                # Shared helper functions
-├── tests/                # Unit tests
-└── main.py               # Entry point
+│   ├── workflows/          # daily_update.yml + ci.yml + rerun_day.yml
+│   └── scripts/            # daily_update.py + get_commit_message.py + rerun_day.py
+├── daily_progress/
+│   ├── week1/ - week8/     # 56 daily Python scripts
+├── dashboard/              # Streamlit app (Week 8)
+├── reports/                # Auto-generated daily reports + charts
+├── data/                   # Processed datasets & logs
+├── models/                 # Saved trained models
+├── tests/                  # CI test suite
+└── main.py
 ```
 
 ---
 
-## 🚀 Quick Start
+## Quick Start
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/AICryptoPredictor.git
+git clone https://github.com/maic93/AICryptoPredictor.git
 cd AICryptoPredictor
 pip install -r requirements.txt
 python main.py
 ```
 
-## 📦 Tech Stack
+## Tech Stack
 
-`pandas` · `numpy` · `yfinance` · `scikit-learn` · `xgboost` · `lightgbm` · `tensorflow` · `keras` · `matplotlib` · `plotly` · `backtrader` · `ta`
+`pandas` · `numpy` · `yfinance` · `scikit-learn` · `xgboost` · `lightgbm` · `matplotlib` · `plotly` · `streamlit` · `scipy` · `requests`
 
-## 💰 Coins Tracked
+## Coins Tracked
 
-| Coin | Symbol |
-|------|--------|
-| Bitcoin | BTC-USD |
-| Ethereum | ETH-USD |
-| Solana | SOL-USD |
-| Binance Coin | BNB-USD |
+BTC · ETH · SOL · BNB · ADA · DOT
 
 ---
 
-> ⚠️ **Disclaimer**: Educational purposes only. Not financial advice.
+> **Disclaimer**: Educational purposes only. Not financial advice.
