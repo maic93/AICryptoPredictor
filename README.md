@@ -65,7 +65,7 @@
 - [x] Day 31 — Signal backtesting: win rate & profit factor
 - [x] Day 32 — Confidence scoring for each signal
 - [x] Day 33 — Multi-timeframe signal analysis (1d, 4h, 1h)
-- [ ] Day 34 — Signal alert system: log & report
+- [x] Day 34 — Signal alert system: log & report
 - [ ] Day 35 — Week 5 recap & signal dashboard
 
 ### Week 6 — Sentiment Analysis
