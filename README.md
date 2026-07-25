@@ -69,7 +69,7 @@
 - [x] Day 35 — Week 5 recap & signal dashboard
 
 ### Week 6 — Sentiment Analysis
-- [ ] Day 36 — Fetch crypto news via NewsAPI / RSS
+- [x] Day 36 — Fetch crypto news via NewsAPI / RSS
 - [ ] Day 37 — NLP preprocessing: tokenize, clean, stem
 - [ ] Day 38 — VADER sentiment scoring on crypto news
 - [ ] Day 39 — Sentiment trend over time visualization
