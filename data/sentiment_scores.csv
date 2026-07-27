@@ -1,0 +1,19 @@
+compound,pos,neg,neu,label,headline
+0.9013469218789927,0.6666666666666666,0.0,0.33333333333333337,POSITIVE,Bitcoin surges past key resistance as institutional demand grows
+0.6920886104511278,0.5,0.0,0.5,POSITIVE,Ethereum upgrade boosts speed and reduces fees significantly
+-0.7513579206940216,0.0,0.75,0.25,NEGATIVE,Crypto market faces severe correction amid regulatory crackdown
+0.721559790547973,0.5,0.0,0.5,POSITIVE,Solana DeFi ecosystem records all-time high daily active users
+0.40109336051907024,0.6666666666666666,0.0,0.33333333333333337,POSITIVE,Bitcoin mining difficulty surges as hashrate reaches new peak
+-0.5356830230562803,0.0,0.5,0.5,NEGATIVE,Central banks issue strong warnings against cryptocurrency risks
+0.5471199711897662,0.5,0.0,0.5,POSITIVE,Major exchange launches new tokens amid market optimism
+0.6701880726876085,0.5,0.0,0.5,POSITIVE,Blockchain adoption accelerates across global financial sector
+-0.8781325135370509,0.0,0.6666666666666666,0.33333333333333337,NEGATIVE,Whale movements trigger fear of massive crypto market selloff
+0.852851893434924,0.6666666666666666,0.0,0.33333333333333337,POSITIVE,Bitcoin ETF sees record inflows as Wall Street embraces crypto
+0.7352326701830115,0.5,0.0,0.5,POSITIVE,Layer 2 solutions dramatically reduce Ethereum transaction costs
+-0.5467003910045507,0.0,0.5,0.5,NEGATIVE,Regulatory uncertainty continues to dampen crypto market sentiment
+-0.9656872696867498,0.0,0.5,0.5,NEGATIVE,DeFi protocol hacked for millions in latest security breach
+0.27666420603118697,0.5,0.0,0.5,POSITIVE,NFT market shows early recovery signs after prolonged downturn
+0.4018893730676202,0.0,0.0,1.0,POSITIVE,Altcoin season looming as Bitcoin dominance falls to yearly low
+-0.8423304268684838,0.0,0.75,0.25,NEGATIVE,Exchange faces insolvency fears as withdrawals surge amid panic
+0.9096448836388021,0.5,0.0,0.5,POSITIVE,Crypto adoption reaches milestone with 500 million global users
+-0.45775481125295125,0.0,0.5,0.5,NEGATIVE,New privacy regulations threaten decentralized exchange operations
