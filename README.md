@@ -72,7 +72,7 @@
 - [x] Day 36 — Fetch crypto news via NewsAPI / RSS
 - [x] Day 37 — NLP preprocessing: tokenize, clean, stem
 - [x] Day 38 — VADER sentiment scoring on crypto news
-- [ ] Day 39 — Sentiment trend over time visualization
+- [x] Day 39 — Sentiment trend over time visualization
 - [ ] Day 40 — Correlate sentiment score with price movement
 - [ ] Day 41 — Sentiment-enhanced price prediction model
 - [ ] Day 42 — Week 6 recap & sentiment pipeline complete
