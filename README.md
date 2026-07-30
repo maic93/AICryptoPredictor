@@ -74,7 +74,7 @@
 - [x] Day 38 — VADER sentiment scoring on crypto news
 - [x] Day 39 — Sentiment trend over time visualization
 - [x] Day 40 — Correlate sentiment score with price movement
-- [ ] Day 41 — Sentiment-enhanced price prediction model
+- [x] Day 41 — Sentiment-enhanced price prediction model
 - [ ] Day 42 — Week 6 recap & sentiment pipeline complete
 
 ### Week 7 — Portfolio Optimizer
