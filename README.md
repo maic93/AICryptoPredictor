@@ -75,7 +75,7 @@
 - [x] Day 39 — Sentiment trend over time visualization
 - [x] Day 40 — Correlate sentiment score with price movement
 - [x] Day 41 — Sentiment-enhanced price prediction model
-- [ ] Day 42 — Week 6 recap & sentiment pipeline complete
+- [x] Day 42 — Week 6 recap & sentiment pipeline complete
 
 ### Week 7 — Portfolio Optimizer
 - [ ] Day 43 — Multi-coin return & covariance matrix
