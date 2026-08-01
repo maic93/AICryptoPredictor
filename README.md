@@ -78,7 +78,7 @@
 - [x] Day 42 — Week 6 recap & sentiment pipeline complete
 
 ### Week 7 — Portfolio Optimizer
-- [ ] Day 43 — Multi-coin return & covariance matrix
+- [x] Day 43 — Multi-coin return & covariance matrix
 - [ ] Day 44 — Markowitz efficient frontier
 - [ ] Day 45 — Monte Carlo portfolio simulation
 - [ ] Day 46 — Sharpe-optimal portfolio weights
