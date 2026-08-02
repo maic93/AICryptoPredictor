@@ -79,7 +79,7 @@
 
 ### Week 7 — Portfolio Optimizer
 - [x] Day 43 — Multi-coin return & covariance matrix
-- [ ] Day 44 — Markowitz efficient frontier
+- [x] Day 44 — Markowitz efficient frontier
 - [ ] Day 45 — Monte Carlo portfolio simulation
 - [ ] Day 46 — Sharpe-optimal portfolio weights
 - [ ] Day 47 — Risk-parity portfolio allocation
