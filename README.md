@@ -82,7 +82,7 @@
 - [x] Day 44 — Markowitz efficient frontier
 - [x] Day 45 — Monte Carlo portfolio simulation
 - [x] Day 46 — Sharpe-optimal portfolio weights
-- [ ] Day 47 — Risk-parity portfolio allocation
+- [x] Day 47 — Risk-parity portfolio allocation
 - [ ] Day 48 — Portfolio rebalancing strategy
 - [ ] Day 49 — Week 7 recap & portfolio summary
 
