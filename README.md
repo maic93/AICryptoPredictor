@@ -83,7 +83,7 @@
 - [x] Day 45 — Monte Carlo portfolio simulation
 - [x] Day 46 — Sharpe-optimal portfolio weights
 - [x] Day 47 — Risk-parity portfolio allocation
-- [ ] Day 48 — Portfolio rebalancing strategy
+- [x] Day 48 — Portfolio rebalancing strategy
 - [ ] Day 49 — Week 7 recap & portfolio summary
 
 ### Week 8 — Web Dashboard
