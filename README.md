@@ -87,7 +87,7 @@
 - [x] Day 49 — Week 7 recap & portfolio summary
 
 ### Week 8 — Web Dashboard
-- [ ] Day 50 — Streamlit app structure & layout
+- [x] Day 50 — Streamlit app structure & layout
 - [ ] Day 51 — Live price widget + sparklines
 - [ ] Day 52 — Prediction chart component
 - [ ] Day 53 — Signal dashboard component
