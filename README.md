@@ -88,7 +88,7 @@
 
 ### Week 8 — Web Dashboard
 - [x] Day 50 — Streamlit app structure & layout
-- [ ] Day 51 — Live price widget + sparklines
+- [x] Day 51 — Live price widget + sparklines
 - [ ] Day 52 — Prediction chart component
 - [ ] Day 53 — Signal dashboard component
 - [ ] Day 54 — Sentiment gauge component
