@@ -90,7 +90,7 @@
 - [x] Day 50 — Streamlit app structure & layout
 - [x] Day 51 — Live price widget + sparklines
 - [x] Day 52 — Prediction chart component
-- [ ] Day 53 — Signal dashboard component
+- [x] Day 53 — Signal dashboard component
 - [ ] Day 54 — Sentiment gauge component
 - [ ] Day 55 — Portfolio pie chart component
 - [ ] Day 56 — Final dashboard & full project complete!
