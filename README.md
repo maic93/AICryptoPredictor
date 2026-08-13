@@ -92,7 +92,7 @@
 - [x] Day 52 — Prediction chart component
 - [x] Day 53 — Signal dashboard component
 - [x] Day 54 — Sentiment gauge component
-- [ ] Day 55 — Portfolio pie chart component
+- [x] Day 55 — Portfolio pie chart component
 - [ ] Day 56 — Final dashboard & full project complete!
 
 ---
