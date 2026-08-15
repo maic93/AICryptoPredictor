@@ -25,7 +25,7 @@ jobs:
       - name: Install dependencies
         run: pip install pandas numpy yfinance requests scikit-learn xgboost lightgbm ta matplotlib seaborn plotly scipy
 
-      - name: Run daily progress script
+      - name: Run daily script
         run: python .github/scripts/daily_update.py
 
       - name: Configure Git
