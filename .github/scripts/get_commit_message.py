@@ -1,7 +1,7 @@
 from datetime import date
 
 PROJECT_START = date(2026, 6, 20)
-PHASE2_START  = date(2026, 8, 14)
+PHASE2_START  = date(2026, 8, 16)
 
 PHASE1_MESSAGES = {
     1:"Day 01 - Project setup & structure",

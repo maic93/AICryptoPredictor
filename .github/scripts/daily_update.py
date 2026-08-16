@@ -7,7 +7,7 @@ import os, subprocess
 from datetime import date, datetime
 
 PROJECT_START  = date(2026, 6, 20)
-PHASE2_START   = date(2026, 8, 14)  # day after day 56 completes
+PHASE2_START   = date(2026, 8, 16)  # day after day 56 completes
 
 CURRICULUM = {
     1:  ("Day 01 — Project setup & structure",                         "daily_progress/week1/day01setup.py"),

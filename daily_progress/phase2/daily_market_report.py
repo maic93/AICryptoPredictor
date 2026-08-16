@@ -312,7 +312,7 @@ def update_performance_log(coins: list):
 
 def main():
     from datetime import date as d
-    PHASE2_START = d(2026, 8, 15)  # UPDATE THIS to day after day 56
+    PHASE2_START = d(2026, 8, 16)  # UPDATE THIS to day after day 56
     day_num = max(1, min((d.today() - PHASE2_START).days + 1, 30))
 
     print(f"Daily Market Report — Day {day_num}/30")
