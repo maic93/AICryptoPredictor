@@ -4,9 +4,9 @@ on:
   workflow_dispatch:
     inputs:
       day:
-        description: 'Day number to re-run (1-28)'
+        description: 'Day number to re-run (1-56 for curriculum, 57 for market report)'
         required: true
-        default: '16'
+        default: '57'
 
 permissions:
   contents: write
@@ -26,7 +26,7 @@ jobs:
           python-version: '3.11'
 
       - name: Install dependencies
-        run: pip install pandas numpy yfinance requests scikit-learn xgboost lightgbm ta matplotlib seaborn plotly
+        run: pip install pandas numpy yfinance requests scikit-learn xgboost lightgbm ta matplotlib seaborn plotly scipy
 
       - name: Re-run day script
         run: python .github/scripts/rerun_day.py ${{ github.event.inputs.day }}
@@ -40,7 +40,7 @@ jobs:
         run: |
           git add .
           git diff --staged --quiet && echo "Nothing to commit" && exit 0
-          git commit -m "🔁 Re-run Day ${{ github.event.inputs.day }} (bug fix)"
+          git commit -m "🔁 Re-run Day ${{ github.event.inputs.day }} ($(date +'%Y-%m-%d'))"
           for i in 1 2 3 4 5; do
             git pull --rebase origin main && git push && break
             echo "Retrying push ($i/5)..."
