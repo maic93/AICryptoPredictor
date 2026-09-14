@@ -1,13 +1,15 @@
 """
 daily_update.py — runs every day via GitHub Actions.
-Phase 1 (Days 1-56): Runs the curriculum script + saves report + ticks README.
-Phase 2 (Days 57+):  Runs the live daily market report.
+Phase 1 (Days 1-56) : curriculum scripts + reports + README ticks
+Phase 2 (30 days)   : live daily market report
+Phase 3 (90 days)   : enhanced report + Fear&Greed + model retraining + weekly deep dive
 """
 import os, subprocess
 from datetime import date, datetime
 
-PROJECT_START  = date(2026, 6, 20)
-PHASE2_START   = date(2026, 8, 16)  # day after day 56 completes
+PROJECT_START = date(2026, 6, 20)
+PHASE2_START  = date(2026, 8, 16)
+PHASE3_START  = date(2026, 9, 15)  # UPDATE to your actual Phase 3 start date
 
 CURRICULUM = {
     1:  ("Day 01 — Project setup & structure",                         "daily_progress/week1/day01setup.py"),
@@ -45,7 +47,7 @@ CURRICULUM = {
     33: ("Day 33 — Multi-timeframe signal analysis",                   "daily_progress/week5/day33multitimeframe.py"),
     34: ("Day 34 — Signal alert system: log & report",                 "daily_progress/week5/day34alerts.py"),
     35: ("Day 35 — Week 5 recap & signal dashboard",                   "daily_progress/week5/day35recap.py"),
-    36: ("Day 36 — Fetch crypto news via NewsAPI / RSS",               "daily_progress/week6/day36newsfetch.py"),
+    36: ("Day 36 — Fetch crypto news via RSS",                         "daily_progress/week6/day36newsfetch.py"),
     37: ("Day 37 — NLP preprocessing: tokenize, clean, stem",          "daily_progress/week6/day37nlpprep.py"),
     38: ("Day 38 — VADER sentiment scoring on crypto news",            "daily_progress/week6/day38vader.py"),
     39: ("Day 39 — Sentiment trend over time visualization",           "daily_progress/week6/day39sentimenttrend.py"),
@@ -68,7 +70,7 @@ CURRICULUM = {
     56: ("Day 56 — Final dashboard & full project complete!",          "daily_progress/week8/day56final.py"),
 }
 
-def run_script(path: str) -> str:
+def run_script(path):
     if not os.path.exists(path):
         return f"Script not found: {path}"
     result = subprocess.run(["python", path], capture_output=True, text=True, timeout=180)
@@ -77,54 +79,42 @@ def run_script(path: str) -> str:
         out += f"\nSTDERR:\n{result.stderr}"
     return out
 
-def save_report(day: int, task: str, script: str, output: str):
+def save_report(day, task, script, output):
     os.makedirs("reports", exist_ok=True)
-    path = f"reports/day{day:02d}.md"
-    with open(path, "w") as f:
+    with open(f"reports/day{day:02d}.md", "w") as f:
         f.write(f"# Day {day:02d} Report\n\n"
-                f"**Task:** {task}\n"
-                f"**Script:** `{script}`\n"
+                f"**Task:** {task}\n**Script:** `{script}`\n"
                 f"**Date:** {datetime.utcnow().strftime('%Y-%m-%d %H:%M UTC')}\n\n"
                 f"## Output\n\n```\n{output.strip()}\n```\n")
-    print(f"  Report saved -> {path}")
 
-def tick_readme(task: str):
+def tick_readme(task):
     with open("README.md", "r") as f:
         content = f.read()
     old = f"- [ ] {task}"
     new = f"- [x] {task}"
     if old in content:
-        content = content.replace(old, new)
         with open("README.md", "w") as f:
-            f.write(content)
-        print(f"  README ticked: {task}")
-
-def run_phase1():
-    today = date.today()
-    day   = max(1, min((today - PROJECT_START).days + 1, 56))
-    task, script = CURRICULUM[day]
-    print(f"Phase 1 — Day {day}/56: {task}")
-    print("=" * 55)
-    output = run_script(script)
-    print(output)
-    save_report(day, task, script, output)
-    tick_readme(task)
-
-def run_phase2():
-    today   = date.today()
-    day_num = max(1, min((today - PHASE2_START).days + 1, 30))
-    script  = "daily_progress/phase2/daily_market_report.py"
-    print(f"Phase 2 — Live Market Report Day {day_num}/30")
-    print("=" * 55)
-    output = run_script(script)
-    print(output)
+            f.write(content.replace(old, new))
 
 def main():
     today = date.today()
-    if today >= PHASE2_START:
-        run_phase2()
+
+    if today >= PHASE3_START:
+        print("Phase 3 — Enhanced Daily Market Report")
+        run_script("daily_progress/phase3/phase3_daily_report.py")
+
+    elif today >= PHASE2_START:
+        print("Phase 2 — Live Daily Market Report")
+        run_script("daily_progress/phase2/daily_market_report.py")
+
     else:
-        run_phase1()
+        day = max(1, min((today - PROJECT_START).days + 1, 56))
+        task, script = CURRICULUM[day]
+        print(f"Phase 1 — Day {day}/56: {task}")
+        output = run_script(script)
+        print(output)
+        save_report(day, task, script, output)
+        tick_readme(task)
 
 if __name__ == "__main__":
     main()

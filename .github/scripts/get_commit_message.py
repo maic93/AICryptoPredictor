@@ -2,6 +2,7 @@ from datetime import date
 
 PROJECT_START = date(2026, 6, 20)
 PHASE2_START  = date(2026, 8, 16)
+PHASE3_START  = date(2026, 9, 15)  # UPDATE to your actual Phase 3 start date
 
 PHASE1_MESSAGES = {
     1:"Day 01 - Project setup & structure",
@@ -31,7 +32,7 @@ PHASE1_MESSAGES = {
     25:"Day 25 - Live prediction pipeline",
     26:"Day 26 - Plotly dashboard",
     27:"Day 27 - Unit tests",
-    28:"Day 28 - Phase 1 complete!",
+    28:"Day 28 - Phase 1 week 4 complete",
     29:"Day 29 - Live signal engine",
     30:"Day 30 - Combined RSI + MACD signals",
     31:"Day 31 - Signal backtesting",
@@ -59,13 +60,24 @@ PHASE1_MESSAGES = {
     53:"Day 53 - Signal dashboard component",
     54:"Day 54 - Sentiment gauge component",
     55:"Day 55 - Portfolio pie chart",
-    56:"Day 56 - Full 8-week project complete!",
+    56:"Day 56 - Full 8-week project complete",
 }
 
 today = date.today()
-if today >= PHASE2_START:
+
+if today >= PHASE3_START:
+    day_num = max(1, min((today - PHASE3_START).days + 1, 90))
+    is_sun  = today.weekday() == 6
+    week    = (day_num - 1) // 7 + 1
+    if is_sun:
+        print(f"Phase 3 Day {day_num}/90 - Weekly deep dive + live signals (Week {week})")
+    else:
+        print(f"Phase 3 Day {day_num}/90 - Live signals, Fear & Greed, model retrain")
+
+elif today >= PHASE2_START:
     day_num = max(1, min((today - PHASE2_START).days + 1, 30))
-    print(f"Market Report {today} - Day {day_num}/30 live signals & analysis")
+    print(f"Phase 2 Day {day_num}/30 - Live market report")
+
 else:
     day = max(1, min((today - PROJECT_START).days + 1, 56))
     print(PHASE1_MESSAGES.get(day, f"Day {day} update"))
