@@ -5,5 +5,12 @@
     "best_coin": "DOT-USD",
     "worst_coin": "ETH-USD",
     "portfolio_ret": 5.231057591843491
+  },
+  {
+    "date": "2026-09-27",
+    "week": 2,
+    "best_coin": "ADA-USD",
+    "worst_coin": "ETH-USD",
+    "portfolio_ret": 1.2063841577735548
   }
 ]
