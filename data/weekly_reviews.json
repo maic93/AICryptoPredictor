@@ -12,5 +12,12 @@
     "best_coin": "ADA-USD",
     "worst_coin": "ETH-USD",
     "portfolio_ret": 1.2063841577735548
+  },
+  {
+    "date": "2026-10-04",
+    "week": 3,
+    "best_coin": "BNB-USD",
+    "worst_coin": "ADA-USD",
+    "portfolio_ret": 1.292432816935907
   }
 ]
