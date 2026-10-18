@@ -26,5 +26,12 @@
     "best_coin": "DOT-USD",
     "worst_coin": "SOL-USD",
     "portfolio_ret": -5.520310223140041
+  },
+  {
+    "date": "2026-10-18",
+    "week": 5,
+    "best_coin": "BTC-USD",
+    "worst_coin": "DOT-USD",
+    "portfolio_ret": -2.6923849603833694
   }
 ]
