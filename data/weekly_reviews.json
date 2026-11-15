@@ -54,5 +54,12 @@
     "best_coin": "BNB-USD",
     "worst_coin": "DOT-USD",
     "portfolio_ret": -2.3969266022619737
+  },
+  {
+    "date": "2026-11-15",
+    "week": 9,
+    "best_coin": "ADA-USD",
+    "worst_coin": "SOL-USD",
+    "portfolio_ret": -14.299557686070438
   }
 ]
