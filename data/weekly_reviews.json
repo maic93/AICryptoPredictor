@@ -61,5 +61,12 @@
     "best_coin": "ADA-USD",
     "worst_coin": "SOL-USD",
     "portfolio_ret": -14.299557686070438
+  },
+  {
+    "date": "2026-11-22",
+    "week": 10,
+    "best_coin": "SOL-USD",
+    "worst_coin": "DOT-USD",
+    "portfolio_ret": -5.779640554144462
   }
 ]
